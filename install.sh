@@ -13,9 +13,9 @@ if [[ "$(uname -m)" != arm64 ]] && [[ "$(sysctl -in sysctl.proc_translated 2>/de
   echo "FinderSideButtons supports Apple Silicon (M-series) Macs only." >&2
   exit 1
 fi
-version="${1:-0.1.0}"
+version="${1:-0.1.1}"
 if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-  echo "Expected a version such as 0.1.0" >&2
+  echo "Expected a version such as 0.1.1" >&2
   exit 1
 fi
 if pgrep -f '/FinderSideButtons.app/Contents/MacOS/FinderSideButtons' >/dev/null; then

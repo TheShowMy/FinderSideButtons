@@ -1,5 +1,7 @@
 # FinderSideButtons
 
+<img src="Assets/AppIcon.png" width="160" height="160" alt="FinderSideButtons application icon: a white mouse and navigation arrows on a blue tile">
+
 让 macOS 访达支持鼠标侧键返回 / 前进。轻量、无 Dock 图标的原生 Swift 菜单栏工具。
 
 A tiny native macOS menu bar app that enables mouse side-button back/forward navigation in Finder.
@@ -19,11 +21,11 @@ A tiny native macOS menu bar app that enables mouse side-button back/forward nav
 在终端运行（无需 sudo，无需安装 Xcode）：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/TheShowMy/FinderSideButtons/v0.1.0/install.sh -o /tmp/FinderSideButtons-install.sh
+curl -fsSL https://raw.githubusercontent.com/TheShowMy/FinderSideButtons/v0.1.1/install.sh -o /tmp/FinderSideButtons-install.sh
 bash /tmp/FinderSideButtons-install.sh
 ```
 
-可以先阅读下载的脚本。脚本从 GitHub Release 下载 v0.1.0，核对 SHA-256 和应用签名完整性，安装至 `~/Applications/FinderSideButtons.app` 并启动。校验和用于检查下载完整性；它不是 Apple 开发者身份认证。
+可以先阅读下载的脚本。脚本从 GitHub Release 下载 v0.1.1，核对 SHA-256 和应用签名完整性，安装至 `~/Applications/FinderSideButtons.app` 并启动。校验和用于检查下载完整性；它不是 Apple 开发者身份认证。更新前请先从菜单栏退出旧版本；更新会保留已保存的方向设置。
 
 首次启动后：
 
@@ -62,6 +64,8 @@ open ~/Applications/FinderSideButtons.app
 ```
 
 构建脚本生成 arm64 `.app`、ZIP 和 `SHA256SUMS` 到 `dist/`。修改源码后重新构建可能需要重新授予辅助功能权限。
+
+应用图标源文件位于 `Assets/AppIcon.png`，构建时使用 macOS 自带的 `sips` 和 `iconutil` 生成包含标准与 Retina 尺寸的 `AppIcon.icns`。图标设计说明见 [Assets/README.md](Assets/README.md)。
 
 ## 卸载
 
